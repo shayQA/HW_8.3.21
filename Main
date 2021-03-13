@@ -1,0 +1,49 @@
+package com.company;
+import com.sun.security.jgss.GSSUtil;
+
+import java.time.LocalTime;
+import java.util.ArrayList;
+public class Main {
+
+    public static void main(String[] args) {
+        //שאלה 5
+     // Teacher mahtT=new MathTeacher();
+      //Teacher historyT=new HistoryTeacher();
+
+      //שאלה 6
+      // לא ניתן לגשת לשדות בגלל שאני לא בדיוק יוצר מופע של הירושים אני יוצר מופע האבא דרך היורשים בגלל זה הם לא מכירים את השדות של עצמם
+     //6ב+ג
+      //identifyTeacher(historyT);
+//10
+        /*
+    CarsMechanic c1=new CarsMechanic();
+    c1.repair();
+      AirplanesMechanic a1=new AirplanesMechanic();
+      a1.repair();
+         */
+      //  RoundZero r=new RoundZero();
+        //System.out.println(r.Round(0.8));
+//19
+        ArrayList<Integer> myNumbers = new ArrayList<Integer>();
+        myNumbers.add(5);
+        myNumbers.add(7);
+        myNumbers.add(9);
+        System.out.println(myNumbers);
+        System.out.println(myNumbers.get(0));
+        myNumbers.remove(1);
+        System.out.println(myNumbers.indexOf(9));
+    }
+
+    //6ב+ג
+    /*
+    public  static void identifyTeacher(Teacher t)
+    {
+        if( t instanceof MathTeacher)
+            System.out.println(((MathTeacher) t).math_skills);
+        else
+            System.out.println(((HistoryTeacher)t).field_of_proession);
+
+    }
+    */
+
+}
