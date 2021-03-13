@@ -1,0 +1,17 @@
+package com.company;
+import org.w3c.dom.ls.LSOutput;
+
+import java.time.LocalTime;
+public abstract class Mechanic {
+    LocalTime T1=LocalTime.now();
+
+    protected String name;
+    protected int years_of_experience;
+
+   public abstract void repair();
+
+   public void useScrewdriver(){
+       System.out.println("Using screwdriver to open this screw");
+   }
+
+}
