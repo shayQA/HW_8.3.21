@@ -1,0 +1,24 @@
+package com.company;
+
+import java.time.LocalTime;
+
+public class CarsMechanic extends Mechanic {
+    protected String[] cat_types_i_can_repair=new String[10];
+
+    LocalTime T1=LocalTime.now();
+   protected String time;
+    @Override
+    public void repair() {
+        LocalTime T1=LocalTime.now();
+        if(T1.getHour()>7&&T1.getHour()<17)
+        System.out.println("repairing car");
+        else
+        System.out.println("garage is closed");
+    }
+    public void replaceWheel()
+    {
+        System.out.println("replacing the damaged wheel");
+    }
+
+
+}
