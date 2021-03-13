@@ -1,0 +1,65 @@
+package com.company;
+
+
+import org.junit.Test;
+import static junit.framework.TestCase.assertEquals;
+public class RoundTest {
+    @Test
+    public void testRoundUp() {
+        // Arrange
+        RoundZero Rz = new RoundZero();
+
+        Double actual_result = Rz.RoundUp(0);
+
+        Double expected_result = 0.0;
+        assertEquals(expected_result, actual_result);
+
+        Double actual_result1 = Rz.RoundUp(0.1);
+
+        Double expected_result1 = 1.0;
+        assertEquals(expected_result1, actual_result1);
+
+        Double actual_result2 = Rz.RoundUp(2);
+
+        Double expected_result2 = -1.0;
+        assertEquals(expected_result2, actual_result2);
+
+    }
+    @Test
+    public void testRoundDown() {
+        RoundZero Rz = new RoundZero();
+        Double actual_result = Rz.RoundDown(1);
+
+        Double expected_result = 1.0;
+        assertEquals(expected_result, actual_result);
+
+        Double actual_result1 = Rz.RoundDown(0.1);
+
+        Double expected_result1 = 0.0;
+        assertEquals(expected_result1, actual_result1);
+
+        Double actual_result2 = Rz.RoundDown(2);
+
+        Double expected_result2 = -1.0;
+        assertEquals(expected_result2, actual_result2);
+    }
+
+    @Test
+    public void testRound() {
+        RoundZero Rz = new RoundZero();
+        Double actual_result = Rz.Round(0.7);
+
+        Double expected_result = 1.0;
+        assertEquals(expected_result, actual_result);
+
+        Double actual_result1 = Rz.Round(0.3);
+
+        Double expected_result1 = 0.0;
+        assertEquals(expected_result1, actual_result1);
+
+        Double actual_result2 = Rz.Round(10);
+        Double expected_result2 = -1.0;
+        assertEquals(expected_result2, actual_result2);
+
+    }
+}
