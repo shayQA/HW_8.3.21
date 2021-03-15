@@ -1,0 +1,14 @@
+package com.company;
+
+public class Apartment {
+    protected String address;
+    protected String size;
+
+    @Override
+    public String toString() {
+        return "Apartment{" +
+                "address='" + address + '\'' +
+                ", size='" + size + '\'' +
+                '}';
+    }
+}
