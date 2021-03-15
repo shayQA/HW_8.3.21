@@ -6,6 +6,16 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
+    
+        LocalTime t1 = LocalTime.now();
+        System.out.println(t1);
+        //1
+        //@OVERIDE
+        //נרצה לעשות זאת בכדי להתאים את הפונקציה למחלקה הנוכחית.
+        
+        //4
+        // תכונה של שפות תכנות המאפשרת לטפל בערכים מטיפוסים שונים בעזרת ממשק תוכנה אחיד. פולימורפיזם נותנת למתכנת את היכולת לממש אלגוריתמים ומבני נתונים לשימוש כללי, ולגזור מהם צורות שימוש שונות בהתאם לעצמים ולנסיבות המשתנות.
+
         //שאלה 5
      // Teacher mahtT=new MathTeacher();
       //Teacher historyT=new HistoryTeacher();
@@ -14,16 +24,95 @@ public class Main {
       // לא ניתן לגשת לשדות בגלל שאני לא בדיוק יוצר מופע של הירושים אני יוצר מופע האבא דרך היורשים בגלל זה הם לא מכירים את השדות של עצמם
      //6ב+ג
       //identifyTeacher(historyT);
-//10
+       //6ב+ג
         /*
-    CarsMechanic c1=new CarsMechanic();
-    c1.repair();
-      AirplanesMechanic a1=new AirplanesMechanic();
-      a1.repair();
+         public  static void identifyTeacher(Teacher t)
+         {
+              if( t instanceof MathTeacher)
+                System.out.println(((MathTeacher) t).math_skills);
+            else
+                System.out.println(((HistoryTeacher)t).field_of_proession);
+        }
+
+        //7
+        //7.1
+        // מחלקה אבסטרקטית הינה מחלקה אשר מהווה בסיס למחלקות אחרות, אך אין לנו באמת צורך באובייקטים ממנה בתוכנית.
+        //7.2
+        // כן
+
+        //8
+        //אנו מגדירים את שמה ואת ההצהרה עליה, אולם איננו מממשים אותה
+        //8.1
+        //לא
+        //8.2
+        //חתימה בלבד
+
+        //9
+        //9.1
+        //לא
+        //9.2
+        //כן
+
+        
+          //10
+         /*
+         CarsMechanic c1=new CarsMechanic();
+         c1.repair();
+         AirplanesMechanic a1=new AirplanesMechanic();
+          a1.repair();
          */
-      //  RoundZero r=new RoundZero();
+         //  RoundZero r=new RoundZero();
         //System.out.println(r.Round(0.8));
-//19
+        
+        //11
+        ElectricDevice electricDevice1= new TV(true,(float)40.5);
+        ElectricDevice electricDevice2=new Cellphone(false,"Apple");
+        RepairElecticDevice(electricDevice1);
+        RepairElecticDevice(electricDevice2);
+        fix(electricDevice1);
+        fix(electricDevice2);
+        
+        //12
+        //12.1
+        // לא
+        //12.2
+        // חישוב היקף עיגול עם PI קבוע.
+
+        //13
+        //13.1
+        //זה למעשה מחלקה אבסטרקטית המכילה מתודות ומאפיינים אבסטרקטים בלבד
+        // נשתמש בו במקרים בהם נרצה לרשום פונקציה כללית שניתן יהיה לממש אותה בכול מיני מחלקות שונות שלא בהכרח יש בניהן קשר.
+
+        //14
+        //14.1
+        //כן, ניתן להכריז עליהם כציבוריים או פרטיים.
+        //14.2
+        //אפשר לממש במחלקות שיורשות ממנו אך לא ב-interface עצמו.
+        //14.3
+        // מחלקה יכולה לירוש יותר מ-interface אחד.
+        //14.4
+        //כן
+
+        //15
+        //ממשק ריק מתפקד כמציין מיקום עבור סוג נתונים שאינו מוגדר טוב בהתנהגות הממשק שלו.
+
+        //16
+        //מחלקה יכולה לירוש ממחלקה אחת בלבד. לעומת זאת- אין הגבלה במימוש אינטרפייסים מרובים.
+        //בשונה מאינטרפייס – במחלקה אבסטרקטית ניתן לרשום קוד, לתת גוף למתודה. הקוד כמובן עובר בהורשה.
+
+        //17
+        /*
+        IPlayer iPlayer=new GuitarPlayer();
+        IPlayer iPlayer1=new PianoPlayer();
+        startMusicShow(iPlayer);
+        startMusicShow(iPlayer1);
+        */
+        
+        //18
+        // זה משתנה עם יכולות בדיוק כמו מערך אבל יש לו יכולת לגדול באופן דינמי.
+
+        
+        //19
         ArrayList<Integer> myNumbers = new ArrayList<Integer>();
         myNumbers.add(5);
         myNumbers.add(7);
@@ -32,18 +121,58 @@ public class Main {
         System.out.println(myNumbers.get(0));
         myNumbers.remove(1);
         System.out.println(myNumbers.indexOf(9));
-    }
+        }
 
-    //6ב+ג
-    /*
-    public  static void identifyTeacher(Teacher t)
-    {
-        if( t instanceof MathTeacher)
-            System.out.println(((MathTeacher) t).math_skills);
-        else
-            System.out.println(((HistoryTeacher)t).field_of_proession);
+        //20
+        // כי הוא יכול להתייחס רק לסוגים ולא לפרימיטיבים.
 
-    }
+        //21
+        //21.1
+        // מתי שנרצה לעשות בדיקה.
+        //21.2
+        // הפונקציה משווה בין שני הפרמטרים לבדוק שהם זהים או לא.
+     
     */
 
 }
+
+//11
+    public static String RepairElecticDevice(ElectricDevice e)
+    {
+            if(e.worksOnBatteries==true)
+                e.insertNewBatteries(true);
+            if(e.isFaulty==false)
+                e.fixDevice();
+                return "was falty";
+    }
+
+    public static void fix(ElectricDevice e)
+    {
+        if(e instanceof TV) {
+            TV e_as_tv= (TV) e;
+            System.out.println("Screen size= "+e_as_tv.screen_size);
+            e_as_tv.fixDevice();
+        }
+        if(e instanceof Cellphone)
+        {
+            Cellphone e_as_cellphone= (Cellphone)e;
+            System.out.println("Brand name= "+ e_as_cellphone.brand);
+            e_as_cellphone.fixDevice();
+        }
+        System.out.println("fixing is done.");
+    }
+
+    //17
+    public static void startMusicShow(IPlayer p)
+    {
+        p.play();
+        if(p instanceof PianoPlayer) {
+            PianoPlayer p_as_piano = (PianoPlayer) p;
+            ((PianoPlayer) p).playJazz();
+        }
+        if(p instanceof GuitarPlayer)
+        {
+            GuitarPlayer p_as_guitar=(GuitarPlayer)p;
+            ((GuitarPlayer) p).rockAndRoll();
+        }
+    }
