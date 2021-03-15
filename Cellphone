@@ -1,0 +1,36 @@
+package com.company;
+
+public class Cellphone extends ElectricDevice {
+    protected String brand;
+
+    public Cellphone(boolean worksOnBatteries, String brand) {
+        super(true);
+        this.brand = brand;
+    }
+
+
+    @Override
+    public void useDevice() {
+        System.out.println("use device.");
+    }
+
+    @Override
+    public void fixDevice() {
+        if(isFaulty==true)
+        {
+            System.out.println("fixing cellphone...");
+            isFaulty=false;
+        }
+        else
+            System.out.println("cellphone is working properly.");
+    }
+
+    //11
+    // אי אפשר לדרוס את הפונקציה כי היא final
+   /* @Override
+    public void insertNewBatteries(boolean workOnBatteries)
+    {
+
+    }
+    */
+}
